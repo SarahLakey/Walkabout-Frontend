@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+import Header from './pages/header/Header';
 import './App.css';
+
 
 function App() {
   return (
-    <h1 className='text-center'>Walkabout the Gateway</h1>
+    <Header/>
   );
 }
 
