@@ -6,14 +6,27 @@
 }
 
 .navbar .navbar-brand {
-    color: #f0e442;
+    color: #fff;
+    padding: 0%;
 }
+
+.img-fluid {
+    width: 150px;
+    padding: 0%;
+}
+
+
 
 /*Style the navigation links*/
 .navbar .nav-link {
-    color: #f0e442;   /* Yellow text color */
+    color: #fff;   /* White text color */
     text-decoration: none;    /* Remove underline */
     margin-right: 20px; /* Add margin between links */
+}
+
+.navbar a:hover {
+    color: #f0e442;   /* Yellow text color */ 
+    font-weight: 750px;
 }
 
 /* Add media query for small screens */
