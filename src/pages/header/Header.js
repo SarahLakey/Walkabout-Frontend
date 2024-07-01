@@ -3,7 +3,6 @@ import { Navbar } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Header.css"
-import navBarLogo from './Logo-Yel-Background.jpg' 
 import navLogo from './Logo-Yel-nav.png'
 
 const Header = () =>{
@@ -12,8 +11,7 @@ const Header = () =>{
             <Navbar bg="primary" variant="dark">
                 <Container>
                     <Navbar.Brand to="/">
-                        {/* <img src={navBarLogo} className="navbar-logo"  alt="Responsive image"/> */}
-                        <img src={navLogo} class="img-fluid" alt="Responsive image"/>
+                        <img src={navLogo} class="img-fluid" alt="Responsive logo"/>
                         {/* <strong> Walkabout Users</strong> */}
                     </Navbar.Brand>
 
