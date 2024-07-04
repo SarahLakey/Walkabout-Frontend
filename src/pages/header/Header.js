@@ -22,8 +22,8 @@ const Header = () =>{
                             Users
                         </Nav.Link>
 
-                        <Nav.Link as={Link} to="/user" className="nav-link" >
-                            Add Users
+                        <Nav.Link as={Link} to="/register" className="nav-link" >
+                            Register
                         </Nav.Link>
 
                     </Nav>

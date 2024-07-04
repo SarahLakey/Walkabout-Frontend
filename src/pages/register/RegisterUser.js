@@ -4,7 +4,7 @@ import { Button, Form } from "react-bootstrap";
 
 const RegisterUser = () => {
 
-    const [formData, setForm] = useState({
+    const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
         email: "",
