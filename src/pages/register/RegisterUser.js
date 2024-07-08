@@ -15,14 +15,14 @@ const RegisterUser = () => {
         password: ""
         // verifyPassword: ""
 
-    })
+    });
 
     const handleInputChange = (event) => {
         const {name, value} = event.target;
         setFormData ({
             ...formData,
             [name]:value,
-        })
+        });
     }
 
     const navigate = useNavigate();
@@ -37,7 +37,7 @@ const RegisterUser = () => {
             const response = await fetch("http://localhost:8080/api/user",{
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData),
             })
 
             const data = await response.json();
@@ -59,7 +59,7 @@ const RegisterUser = () => {
                 <h1>Welcome!</h1>
                 <h2>Create a New Account:</h2>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group controlId="formBasicName">
+                    <Form.Group controlId="formFirstName">
                         <Form.Control
                             type="text"
                             name="firstName"
@@ -69,7 +69,7 @@ const RegisterUser = () => {
                         />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicName">
+                    <Form.Group controlId="formLastName">
                         <Form.Control
                             type="text"
                             name="lastName"
@@ -79,7 +79,7 @@ const RegisterUser = () => {
                         />
                     </Form.Group>
                     
-                    <Form.Group controlId="formBasicName" >
+                    <Form.Group controlId="formEmail" >
                         <Form.Control
                             type="email"
                             name="email"
@@ -89,7 +89,7 @@ const RegisterUser = () => {
                         />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicName">
+                    <Form.Group controlId="formUsername">
                         <Form.Control
                             type="text"
                             name="username"
@@ -99,9 +99,9 @@ const RegisterUser = () => {
                         />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicName">
+                    <Form.Group controlId="formPassword">
                         <Form.Control
-                            type="text"
+                            type="password"
                             name="password"
                             placeholder="Enter password"
                             value= {formData.password}
@@ -109,7 +109,7 @@ const RegisterUser = () => {
                         />
                     </Form.Group>
 
-                    {/* <Form.Group controlId="formBasicName">
+                    {/* <Form.Group controlId="formVerifyPassword">
                         <Form.Control
                             type="text"
                             name="password"

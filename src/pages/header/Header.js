@@ -13,7 +13,7 @@ const Header = () =>{
 
                 <Container>
                     <Navbar.Brand to="/">
-                        <img src={navLogo} class="img-fluid" alt="Responsive logo"/>
+                        <img src={navLogo} className="img-fluid" alt="Responsive logo"/>
                         {/* <strong> Walkabout Users</strong> */}
                     </Navbar.Brand>
 
