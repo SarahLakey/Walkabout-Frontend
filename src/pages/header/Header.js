@@ -8,7 +8,9 @@ import navLogo from './Logo-Yel-nav.png'
 const Header = () =>{
     return(
         <>
-            <Navbar bg="primary" variant="dark">
+            {/* <Navbar bg="primary" variant="dark"> */}
+            <Navbar variant="dark">
+
                 <Container>
                     <Navbar.Brand to="/">
                         <img src={navLogo} class="img-fluid" alt="Responsive logo"/>
