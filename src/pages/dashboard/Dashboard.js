@@ -25,6 +25,29 @@ const Dashboard = () => {
 
     }, []);
 
+    //call the delete user api
+    const handleDelete = async (userId) => {
+        try {
+            const response = await fetch(`http://localhost:8080/api/user/${userId}`, 
+                {
+                method: "DELETE",
+        });
+
+        //update page data without needing to refresh the page: 
+        if(response.ok){
+            setUsers((prevUsers) =>
+                prevUsers.filter((user) => user.id !== userId)
+            )
+        }
+
+            console.log(`User with ID ${userId} deleted successfully`);
+
+        } catch (error) {
+            console.error("Error deleting user:", error.message);
+        }
+    }
+
+
     return (
         <>
         <Container className="mt-5">
@@ -52,7 +75,7 @@ const Dashboard = () => {
                                     <td>{user.username}</td>
                                     <td>
                                         <Button variant="outline-secondary" >Update </Button> {" "}
-                                        <Button variant="outline-danger">Delete</Button>
+                                        <Button variant="outline-danger" onClick={()=> handleDelete(user.id)}>Delete</Button>
                                     </td>
                                 </tr>
                             ))}
