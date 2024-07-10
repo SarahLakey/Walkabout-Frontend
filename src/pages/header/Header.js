@@ -21,11 +21,19 @@ const Header = () =>{
                     <Nav className="ml-auto">
 
                         <Nav.Link as={Link} to="/" className="nav-link" >
-                            Users
+                            Home
+                        </Nav.Link>
+
+                        <Nav.Link as={Link} to="/userList" className="nav-link" >
+                            User List
                         </Nav.Link>
 
                         <Nav.Link as={Link} to="/register" className="nav-link" >
                             Register
+                        </Nav.Link>
+
+                        <Nav.Link as={Link} to="/steps" className="nav-link" >
+                            Add Steps
                         </Nav.Link>
 
                     </Nav>

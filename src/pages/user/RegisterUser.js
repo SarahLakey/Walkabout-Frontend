@@ -41,13 +41,13 @@ const RegisterUser = () => {
             })
 
             const data = await response.json();
-            console.log("employee created", data);
+            console.log("User created", data);
 
             //redirect user to dashboard
             navigate("/")
 
         } catch (error) {
-            console.log("Error creating employee:", error.message);
+            console.log("Error creating user:", error.message);
         }
 
 
