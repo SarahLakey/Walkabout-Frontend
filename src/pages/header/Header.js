@@ -24,6 +24,10 @@ const Header = () =>{
                             Home
                         </Nav.Link>
 
+                        <Nav.Link as={Link} to="/dashboard" className="nav-link" >
+                            Dashboard
+                        </Nav.Link>
+
                         <Nav.Link as={Link} to="/userList" className="nav-link" >
                             User List
                         </Nav.Link>
@@ -32,7 +36,7 @@ const Header = () =>{
                             Register
                         </Nav.Link>
 
-                        <Nav.Link as={Link} to="/steps" className="nav-link" >
+                        <Nav.Link as={Link} to="/stepCounter" className="nav-link" >
                             Add Steps
                         </Nav.Link>
 

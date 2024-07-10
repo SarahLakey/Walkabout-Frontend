@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./RegisterUser.css"
-import { Button, Form } from "react-bootstrap";
+import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 
@@ -59,7 +59,13 @@ const RegisterUser = () => {
                 <h1>Welcome!</h1>
                 <h2>Create a New Account:</h2>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group controlId="formFirstName">
+                <Row >
+                    <Form.Group as={Col} controlId="formFirstName">
+                    <FloatingLabel
+                    controlId="floatingFirsNameInput"
+                    label="Enter First Name"
+                    className="mb-3"
+                    >
                         <Form.Control
                             type="text"
                             name="firstName"
@@ -67,9 +73,15 @@ const RegisterUser = () => {
                             value= {formData.firstName}
                             onChange={handleInputChange}
                         />
+                        </FloatingLabel>
                     </Form.Group>
 
-                    <Form.Group controlId="formLastName">
+                    <Form.Group as={Col} controlId="formLastName">
+                    <FloatingLabel
+                    controlId="floatingLastNameInput"
+                    label="Enter Last Name"
+                    className="mb-3"
+                    >
                         <Form.Control
                             type="text"
                             name="lastName"
@@ -77,9 +89,15 @@ const RegisterUser = () => {
                             value= {formData.lastName}
                             onChange={handleInputChange}
                         />
+                        </FloatingLabel>
                     </Form.Group>
-                    
-                    <Form.Group controlId="formEmail" >
+                    </Row>
+                    <Form.Group as={Col} controlId="formEmail" >
+                    <FloatingLabel
+                    controlId="floatingEmailInput"
+                    label="Enter Email"
+                    className="mb-3"
+                    >
                         <Form.Control
                             type="email"
                             name="email"
@@ -87,9 +105,15 @@ const RegisterUser = () => {
                             value= {formData.email}
                             onChange={handleInputChange}
                         />
+                        </FloatingLabel>
                     </Form.Group>
 
                     <Form.Group controlId="formUsername">
+                    <FloatingLabel
+                    controlId="floatingUsernameInput"
+                    label="Enter Username"
+                    className="mb-3"
+                    >
                         <Form.Control
                             type="text"
                             name="username"
@@ -97,27 +121,43 @@ const RegisterUser = () => {
                             value= {formData.username}
                             onChange={handleInputChange}
                         />
+                        </FloatingLabel>
                     </Form.Group>
 
-                    <Form.Group controlId="formPassword">
+                    <Row >
+                    <Form.Group as={Col} controlId="formPassword">
+                    <FloatingLabel
+                    controlId="floatingPasswordInput"
+                    label="Enter Password"
+                    className="mb-3"
+                    >
                         <Form.Control
                             type="password"
                             name="password"
-                            placeholder="Enter password"
+                            placeholder="Enter Password"
                             value= {formData.password}
                             onChange={handleInputChange}
                         />
+                        </FloatingLabel>
+ 
                     </Form.Group>
 
-                    {/* <Form.Group controlId="formVerifyPassword">
+                    <Form.Group as={Col}  controlId="formVerifyPassword">
+                        <FloatingLabel
+                            controlId="floatingVerifyPasswordInput"
+                            label="Verify Password"
+                            className="mb-3"
+                        >
                         <Form.Control
                             type="text"
                             name="password"
-                            placeholder="Verify password"
+                            placeholder="Verify Password"
                             value= {formData.verifyPassword}
                             onChange={handleInputChange}
                         />
-                    </Form.Group> */}
+                        </FloatingLabel>
+                    </Form.Group>
+                    </Row>
 
                     <Button variant="primary" type="submit" className="w-100">
                         Register User
