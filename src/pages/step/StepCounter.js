@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./StepCounter.css"
 import { Form, Button, FloatingLabel } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const StepCounter = () => {
@@ -21,12 +21,52 @@ const StepCounter = () => {
         })
     }
 
+    const navigate = useNavigate();
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+                // Convert date from YYYY-MM-DD to MM-DD-YYYY
+                const [year, month, day] = formData.date.split("-");
+                const formattedDate = `${month}-${day}-${year}`;
+        
+                const formattedFormData = {
+                    ...formData,
+                    date: formattedDate,
+                };
+        
+                console.log(formattedFormData);
+        
+        console.log(formData);
+
+        try{
+            const response = await fetch("http://localhost:8080/api/stepCounter",{
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(formData),
+            })
+
+            const data = await response.json();
+            console.log("Steps added", data);
+
+            //redirect user to dashboard
+            navigate("/dashboard")
+
+        } catch (error) {
+            console.log("Error adding steps:", error.message);
+        }
+
+
+    }
+
+
 
     return (
         <>
         <div className="center-form">
             <h1>Add Steps</h1>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formDate">
                 <FloatingLabel
                     controlId="floatingInput"

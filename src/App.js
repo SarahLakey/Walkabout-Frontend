@@ -21,7 +21,7 @@ function App() {
         <Route path='/userlist' element={<UserList/>} />
         <Route path='/user/:id' element={<UpdateUser/>} />
         <Route path='/stepCounter' element={<StepCounter/>} />
-
+        <Route path='/steps/:id' element={<StepCounter/>} />
         <Route path='*' element={<NoMatch/>} />
 
       </Routes>

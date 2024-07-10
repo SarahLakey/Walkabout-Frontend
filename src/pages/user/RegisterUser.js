@@ -12,8 +12,8 @@ const RegisterUser = () => {
         lastName: "",
         email: "",
         username: "",
-        password: ""
-        // verifyPassword: ""
+        password: "",
+        verifyPassword: ""
 
     });
 
@@ -149,8 +149,8 @@ const RegisterUser = () => {
                             className="mb-3"
                         >
                         <Form.Control
-                            type="text"
-                            name="password"
+                            type="password"
+                            name="verifyPassword"
                             placeholder="Verify Password"
                             value= {formData.verifyPassword}
                             onChange={handleInputChange}
@@ -162,7 +162,6 @@ const RegisterUser = () => {
                     <Button variant="primary" type="submit" className="w-100">
                         Register User
                     </Button>
-
 
                 </Form>
             </div>
