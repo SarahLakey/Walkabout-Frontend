@@ -8,6 +8,7 @@ import HomePage from './pages/homePage/HomePage';
 import UserList from './pages/admin/UserList';
 import Dashboard from './pages/dashboard/Dashboard';
 import StepCounter from './pages/step/StepCounter';
+import UpdateSteps from './pages/step/UpdateSteps';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Route path='/userlist' element={<UserList/>} />
         <Route path='/user/:id' element={<UpdateUser/>} />
         <Route path='/stepCounter' element={<StepCounter/>} />
-        <Route path='/steps/:id' element={<StepCounter/>} />
+        <Route path='/steps/:id' element={<UpdateSteps/>} />
         <Route path='*' element={<NoMatch/>} />
 
       </Routes>
