@@ -1,3 +1,55 @@
+# Walkabout-Backend 2.0
+#### *Note:* This project is a refactored version the original Walkabout the Gateway application:
+- using different tech stack
+- improving previous glitches
+- gaining hands-on experiencing writing code for every component 
+*(in contrast - in the original application, our group split up developing responsibilities)*
+
+
+The goal of this project is to implement an online step tracker platform to satiate users’ curiosity about St. Louis while incentivizing walking for fitness or leisure. Our group found that current step trackers are missing features that could improve engagement and user experience so we developed a fake user to showcase how this can help people make healthier habits with this gamified approach. This platform provides a way to build a community by encouraging communication and interaction among neighbors and tourists in your area.
+
+## Tech Stack:
+- **Java and Spring**:
+    - Backend development for maintainability, scalability, and security.
+
+
+- **React**:
+    - Frontend development to enhance clientside interactivity, enable component-based architecture, and improve development efficiency with reusable UI components and state management.
+    - React's virtual DOM also offers a more dynamic and responsive user experience.
+
+
+- **MySQL**:
+    - Relational database that offers reliability, performance, and scalability.
+    - Experience points and walking data stored in MySQL database.
+    - Users can create, read, update, and delete journal entries about the specific areas they’ve walked.
+
+
+<!-- - **API**:
+    - *Coming soon* -->
+
+## Key Features:
+
+- **User account creation requirement**:
+    - Users can create and manage an account.
+    - Authentication filter for users and nonusers to access different parts of the website.
+
+
+- **Full CRUD Functionality**:
+    - Users can create, read, update, and delete journal entries about the specific areas they’ve walked.
+
+
+- **Relational Database**:
+  - Experience points stored in MySQL database.
+
+
+<!-- - **External API Usage**:
+    - *Coming soon* -->
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
