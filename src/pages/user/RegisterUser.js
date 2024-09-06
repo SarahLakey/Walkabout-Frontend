@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./RegisterUser.css"
 import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -52,6 +52,10 @@ const RegisterUser = () => {
 
 
     }
+
+    useEffect(() => {
+        document.title = `Register User`
+    })
 
     return(
         <>

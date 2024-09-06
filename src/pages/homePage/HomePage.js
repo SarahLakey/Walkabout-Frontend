@@ -1,8 +1,13 @@
 import { Container } from "react-bootstrap";
 import "./HomePage.css"
+import { useEffect } from "react";
 
 
 const HomePage = () => {
+
+    useEffect(() => {
+        document.title = `Walkabout the Gateway`
+    })
 
     return(
         <>

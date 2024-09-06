@@ -13,6 +13,10 @@ const Dashboard = () => {
     const [steps, setSteps] = useState([]);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = `My Dashboard`
+    })
     
 
     useEffect( () => {

@@ -12,6 +12,10 @@ const UserList = () => {
     const [users, setUsers] = useState([]);
     const navigate = useNavigate();
 
+    useEffect(() => {
+        document.title = `Walkabout Users`
+    })
+
     useEffect( () => {
         const fetchUsers = async () => {
             try{

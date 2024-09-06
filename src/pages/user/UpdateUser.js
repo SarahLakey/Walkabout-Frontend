@@ -64,6 +64,10 @@ const UpdateUser = () =>{
         }
     }
 
+    useEffect(() => {
+        document.title = `Update User`
+    })
+
     return(
         <>
         <div className="center-form">

@@ -22,6 +22,10 @@ const UpdateSteps = () => {
                 [name]:value,
             });
         };
+
+        useEffect(() => {
+            document.title = `Update Steps`
+        })
     
         //call backend API
         useEffect(() => {

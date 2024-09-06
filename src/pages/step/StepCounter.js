@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./StepCounter.css"
 import { Form, Button, FloatingLabel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -60,6 +60,9 @@ const StepCounter = () => {
 
     }
 
+    useEffect(() => {
+        document.title = `Add Steps`
+    })
 
 
     return (
